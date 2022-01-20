@@ -13,6 +13,8 @@
 		D238AE5F279959A30033E3AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D238AE5D279959A30033E3AE /* Main.storyboard */; };
 		D238AE61279959A60033E3AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D238AE60279959A60033E3AE /* Assets.xcassets */; };
 		D238AE64279959A60033E3AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D238AE62279959A60033E3AE /* LaunchScreen.storyboard */; };
+		D238AE6D27995AD90033E3AE /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238AE6C27995AD90033E3AE /* SwiftUIView.swift */; };
+		D238AE70279965310033E3AE /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D238AE6F279965310033E3AE /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D238AE60279959A60033E3AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D238AE63279959A60033E3AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D238AE65279959A60033E3AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D238AE6C27995AD90033E3AE /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		D238AE6F279965310033E3AE /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				D238AE57279959A30033E3AE /* AppDelegate.swift */,
 				D238AE59279959A30033E3AE /* SceneDelegate.swift */,
 				D238AE5B279959A30033E3AE /* ViewController.swift */,
+				D238AE6C27995AD90033E3AE /* SwiftUIView.swift */,
+				D238AE6F279965310033E3AE /* RatingView.swift */,
 				D238AE5D279959A30033E3AE /* Main.storyboard */,
 				D238AE60279959A60033E3AE /* Assets.xcassets */,
 				D238AE62279959A60033E3AE /* LaunchScreen.storyboard */,
@@ -139,6 +145,8 @@
 			files = (
 				D238AE5C279959A30033E3AE /* ViewController.swift in Sources */,
 				D238AE58279959A30033E3AE /* AppDelegate.swift in Sources */,
+				D238AE6D27995AD90033E3AE /* SwiftUIView.swift in Sources */,
+				D238AE70279965310033E3AE /* RatingView.swift in Sources */,
 				D238AE5A279959A30033E3AE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
