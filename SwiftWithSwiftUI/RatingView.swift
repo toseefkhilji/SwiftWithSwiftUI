@@ -11,7 +11,7 @@ struct RatingView: View {
     @Binding var rating: Int
     var onCallDelegate: ((Int)->Void)? = nil
     var maximumRating = 5
-    var offImage: Image?
+    var offImage = Image(systemName: "star")
     var onImage = Image(systemName: "star.fill")
     var offColor = Color.gray
     var onColor = Color.yellow
@@ -20,10 +20,8 @@ struct RatingView: View {
         HStack {
 
             ForEach(1..<maximumRating + 1) { number in
-                self.image(for: number)
-
+                 self.image(for: number).resizable().frame(width: 40, height: 40)
                     .foregroundColor(number > self.rating ? self.offColor : self.onColor)
-
                     .onTapGesture {
                         self.rating = number
                         onCallDelegate?(number)
@@ -33,11 +31,15 @@ struct RatingView: View {
     }
 
     func image(for number: Int) -> Image {
+        var image: Image
+
         if number > rating {
-            return offImage ?? onImage
+            image = offImage ?? onImage
         } else {
-            return onImage
+            image = onImage
         }
+
+        return image
     }
 }
 

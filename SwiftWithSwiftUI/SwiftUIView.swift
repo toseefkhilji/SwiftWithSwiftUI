@@ -12,26 +12,33 @@ struct SwiftUIView: View {
     @State var text: String = ""
     @State var rating: Int = 0
     var body: some View {
-        VStack {
-            Text("Hello, World! \nthis is SwiftUI").padding()
-            HStack(alignment: .center) {
-                TextField("Enter Name", text: $text)
-                    .multilineTextAlignment(.center)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            }
-            RatingView(rating: $rating)
-                .padding()
-            Button(action: {
-                onCallDelegate?(text, rating)
-            }, label: {
-                Text("Call Delegate").foregroundColor(.white)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .padding()
-                    .background(Color.green)
-                    .mask(Capsule())
-            })
 
-        }.padding(8)
+        ZStack {
+            GradientView()
+            VStack {
+
+                Text("Hello, World! \nPlease give feedback").multilineTextAlignment(.center).padding()
+                RatingView(rating: $rating)
+                    .padding()
+                HStack(alignment: .center) {
+                    TextField("Enter Feedback", text: $text)
+                        .multilineTextAlignment(.center)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }.padding()
+
+                Button(action: {
+                    onCallDelegate?(text, rating)
+                }, label: {
+                    Text("Submit").foregroundColor(.white)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .padding()
+                        .background(Color.green)
+                        .mask(Capsule())
+                }).padding()
+
+            }.padding(8)
+        }
+
     }
 }
 
